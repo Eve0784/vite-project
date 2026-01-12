@@ -35,3 +35,10 @@ found 0 vulnerabilities
 
 > vite-project@0.0.0 dev
 > vite
+
+
+npm run dev  per avviare il pacchetto vite
+npm run build
+
+
+da casa npm install nel terminale
