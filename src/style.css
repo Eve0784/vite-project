@@ -1,4 +1,36 @@
 *{
-  border: rebeccapurple 1px solid;
+  /* border: rebeccapurple 1px solid; */
   box-sizing: border-box;
+}
+
+.card-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: space-evenly;
+}
+.card-meteo{
+  width: 300px;
+  border: 2px solid lightblue;
+  border-radius: 25px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: space-between;
+}
+
+.chart-container {
+  width: 80%;
+  max-width: 800px;
+  max-height: 450px;
+  height: 90%;
+  margin: 25px auto;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 10px;
+  border: rgb(20, 20, 24) 1px solid;
 }
