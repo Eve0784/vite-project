@@ -18,13 +18,9 @@ export class WeatherService {
 
         const times = data.hourly.time;
         const temperatures = data.hourly.temperature_2m;
-        const tempUnit = data.hourly_units.temperature_2m;
         const rains = data.hourly.rain;
-        const rainUnit = data.hourly_units.rain;
         const codes = data.hourly.weather_code;
-        const wCode = data.hourly_units.weather_code
         const winds = data.hourly.wind_speed_10m;
-        const windUnit = data.hourly_units.wind_speed_10m
 
         // const hourlyData = times.map((time, index) => ({
         //     time,
