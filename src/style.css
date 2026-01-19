@@ -17,7 +17,7 @@ header {
   height: 100px;
   margin-bottom: 20px;
   align-content: center;
-  background-image: url(../public/background/bg.jpg);
+  background-image: url(/background/bg.jpg);
   background-position:inherit;
   box-shadow:2px 2px 4px rgba(0, 0, 0, 0.7) ;
 }

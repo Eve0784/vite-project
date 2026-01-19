@@ -2,6 +2,8 @@ import "./style.css";
 import { WeatherService } from "./meteo-service.js";
 import { Chart, LineController, LineElement, PointElement, LinearScale, CategoryScale, Title, plugins, Legend, TimeScale } from 'chart.js';
 import 'chartjs-adapter-moment';
+import moment from 'moment';
+import 'moment/locale/it';
 
 
 
@@ -100,9 +102,17 @@ function displayWeather(meteoData) {
             block.appendChild(img);
 
             //-------------------------------- número grande (temperatura o lluvia, eliges)
+            // const label = document.createElement('span');
+            // label.classList.add('big-number');
+            // label.textContent = Math.round(data.temperature) + '°C';
+            // block.appendChild(label);
+
+            //------------------------------------------------para mostrar la fecha---------------------------//
+
             const label = document.createElement('span');
             label.classList.add('big-number');
-            label.textContent = Math.round(data.temperature) + '°C';
+            // Formatea con Moment
+            label.textContent = moment(data.time).format('D');
             block.appendChild(label);
 
             //--------------------------------------- hora debajo
@@ -242,10 +252,12 @@ function testChart(canvasId, dataPoints) {
                     type: 'time',
                     time: {
                         displayFormats: {
-                            hour: 'DD/MM HH:mm',
-                            day: 'DD/MM HH:mm'
+                            hour: 'D--HH:mm',
+                            day: 'D'
+                            // hour: 'DD/MM HH:mm',
+                            // day: 'DD/MM HH:mm'
                         },
-                        tooltipFormat: 'DD-MM HH:mm'
+                        tooltipFormat: 'D [de] MMMM HH:mm'
                     }
                 }
             }
